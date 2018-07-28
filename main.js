@@ -13,7 +13,11 @@ app.on('ready', function () {
     var mainAddr = 'http://localhost:8080'; // ポートはmain.pyで設定された値
 
     var openWindow = function () {
-        mainWindow = new BrowserWindow({ width: 1000, height: 1000 });
+        mainWindow = new BrowserWindow({ 
+            width: 900, 
+            height: 800,
+            useContentSize: true
+             });
         mainWindow.loadURL(mainAddr);
         mainWindow.on('closed', function () {
             mainWindow = null;
