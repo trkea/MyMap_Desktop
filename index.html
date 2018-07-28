@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="map" style="width:1000px; height:1000px;"></div>
+<script type="text/javascript" charset="utf-8" src="https://map.yahooapis.jp/js/V1/jsapi?appid=API_KEY"></script>
+<script type="text/javascript">
+    require('dotenv').config();
+	window.onload = function(){
+    var ymap = new Y.Map("map",{
+    	configure: {
+    		doubleClickZoom : true,
+        scrollWheelZoom : true,
+        singleClickPan : true,
+        dragging : false
+    	}
+    });
+}
+</script>
+</body>
+</html>
