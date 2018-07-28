@@ -4,7 +4,6 @@
 <div id="map" style="width:1000px; height:1000px;"></div>
 <script type="text/javascript" charset="utf-8" src="https://map.yahooapis.jp/js/V1/jsapi?appid=API_KEY"></script>
 <script type="text/javascript">
-    require('dotenv').config();
 	window.onload = function(){
     var ymap = new Y.Map("map",{
     	configure: {
@@ -14,6 +13,10 @@
         dragging : false
     	}
     });
+    ymap.drawMap(new Y.LatLng(35.702205, 139.774146), 18, Y.LayerSetId.NORMAL);
+    ymap.addControl(new Y.ZoomControl());
+    ymap.addControl(new Y.SearchControl());
+    ymap.addControl(new Y.CenterMarkControl());
 }
 </script>
 </body>
